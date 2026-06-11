@@ -124,7 +124,6 @@ main, .nav, .footer { position: relative; z-index: 1; }
 .nav.is-scrolled {
   background: rgba(11, 5, 16, 0.72);
   backdrop-filter: blur(16px) saturate(140%);
-  border-bottom: 1px solid var(--stroke);
 }
 .nav__inner {
   width: min(var(--maxw), 92vw); margin-inline: auto;
