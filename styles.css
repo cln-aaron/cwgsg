@@ -527,6 +527,13 @@ main, .nav, .footer { position: relative; z-index: 1; }
 .media-photo--art::after, .media-photo--art::before { display: none; }
 .media-photo--art img { filter: none; }
 
+/* Photographic hero: keep it realistic, just a gentle brand wash */
+.media-photo--hero img { filter: saturate(1.06) contrast(1.04) brightness(0.98); }
+.media-photo--hero::after {
+  background: linear-gradient(160deg, rgba(232,17,45,0.18), rgba(123,47,240,0.26));
+  mix-blend-mode: soft-light;
+}
+
 /* Card call-to-action link */
 .card__link {
   display: inline-block; margin-top: 1rem; font: 600 0.92rem "Sora";
