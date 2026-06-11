@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b0510" />
+  <title>Contact | CWG Innovation</title>
+  <meta name="description" content="Book a demo or talk to the CWG Innovation team about putting a single intelligence platform to work." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='1' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%23ff2d55'/%3E%3Cstop offset='1' stop-color='%23a855f7'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url(%23g)' d='M16 2c3 5 1 7-1 9 4-1 6 2 6 6a7 7 0 11-14 0c0-3 2-5 3-7 1 3 3 3 4 1 1-3-1-6 2-9z'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <canvas id="ember-canvas" aria-hidden="true"></canvas>
+  <div class="aurora" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="brand" aria-label="CWG Innovation home">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="28" height="28">
+            <defs>
+              <linearGradient id="flame" x1="0" y1="1" x2="1" y2="0">
+                <stop offset="0" stop-color="#ff2d55" />
+                <stop offset="0.5" stop-color="#ff6b35" />
+                <stop offset="1" stop-color="#a855f7" />
+              </linearGradient>
+            </defs>
+            <path fill="url(#flame)" d="M16 2c3 5 1 7-1 9 4-1 6 2 6 6a7 7 0 11-14 0c0-3 2-5 3-7 1 3 3 3 4 1 1-3-1-6 2-9z" />
+          </svg>
+        </span>
+        <span class="brand__text">CWG<span class="brand__accent">Innovation</span></span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="platform.html">Platform</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="btn btn--ghost nav__cta" aria-current="page">Book a demo</a>
+      </nav>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="pagehead">
+      <div class="container">
+        <span class="eyebrow reveal">Contact</span>
+        <h1 class="pagehead__title reveal">Let's start a <span class="flame-text">conversation</span></h1>
+        <p class="pagehead__lead reveal">Tell us a little about your team and what you are hoping to do. We'll get back to you within one working day.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:1rem">
+      <div class="container contact">
+        <div class="contact__form reveal">
+          <form id="leadForm" novalidate>
+            <div class="form-row">
+              <div class="field-block">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Jordan Lee" required />
+              </div>
+              <div class="field-block">
+                <label for="email">Work email</label>
+                <input id="email" name="email" type="email" placeholder="jordan@company.com" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field-block">
+                <label for="company">Company</label>
+                <input id="company" name="company" type="text" placeholder="Company name" />
+              </div>
+              <div class="field-block">
+                <label for="team">Team size</label>
+                <select id="team" name="team">
+                  <option value="">Select one</option>
+                  <option>1–10</option>
+                  <option>11–50</option>
+                  <option>51–200</option>
+                  <option>200+</option>
+                </select>
+              </div>
+            </div>
+            <div class="field-block">
+              <label for="message">What would you like to do?</label>
+              <textarea id="message" name="message" rows="4" placeholder="A sentence or two about the work you have in mind."></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary">Send message</button>
+            <p class="cta__note" id="formNote" role="status"></p>
+          </form>
+        </div>
+
+        <aside class="contact__aside reveal">
+          <div class="contact__card">
+            <h3>Prefer email?</h3>
+            <p>Reach us directly and a real person will reply.</p>
+            <a href="mailto:hello@cwginnovation.com" class="contact__link">hello@cwginnovation.com</a>
+          </div>
+          <div class="contact__card">
+            <h3>What happens next</h3>
+            <ul class="ticks ticks--tight">
+              <li>We read your note and reply within a working day</li>
+              <li>A short call to understand the work</li>
+              <li>A walkthrough on a task that matters to you</li>
+            </ul>
+          </div>
+          <div class="contact__card">
+            <h3>No pressure</h3>
+            <p>We are happy to answer questions even if the timing is not right yet.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="brand">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="24" height="24"><path fill="url(#flame)" d="M16 2c3 5 1 7-1 9 4-1 6 2 6 6a7 7 0 11-14 0c0-3 2-5 3-7 1 3 3 3 4 1 1-3-1-6 2-9z" /></svg>
+          </span>
+          <span class="brand__text">CWG<span class="brand__accent">Innovation</span></span>
+        </a>
+        <p>A single, governed home for the AI your business depends on.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Product</h4>
+        <a href="platform.html">Platform</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="contact.html">Book a demo</a>
+      </div>
+      <div class="footer__col">
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html#values">Our approach</a>
+      </div>
+      <div class="footer__col">
+        <h4>Get in touch</h4>
+        <a href="mailto:hello@cwginnovation.com">hello@cwginnovation.com</a>
+        <a href="contact.html">Talk to the team</a>
+      </div>
+    </div>
+    <div class="container footer__base">
+      <span>© <span id="year"></span> CWG Innovation. All rights reserved.</span>
+      <span class="footer__legal"><a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Security</a></span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

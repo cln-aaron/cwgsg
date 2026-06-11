@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b0510" />
+  <title>About | CWG Innovation</title>
+  <meta name="description" content="CWG Innovation is a focused team building one well-governed platform for the AI businesses actually use." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='1' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%23ff2d55'/%3E%3Cstop offset='1' stop-color='%23a855f7'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url(%23g)' d='M16 2c3 5 1 7-1 9 4-1 6 2 6 6a7 7 0 11-14 0c0-3 2-5 3-7 1 3 3 3 4 1 1-3-1-6 2-9z'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <canvas id="ember-canvas" aria-hidden="true"></canvas>
+  <div class="aurora" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="brand" aria-label="CWG Innovation home">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="28" height="28">
+            <defs>
+              <linearGradient id="flame" x1="0" y1="1" x2="1" y2="0">
+                <stop offset="0" stop-color="#ff2d55" />
+                <stop offset="0.5" stop-color="#ff6b35" />
+                <stop offset="1" stop-color="#a855f7" />
+              </linearGradient>
+            </defs>
+            <path fill="url(#flame)" d="M16 2c3 5 1 7-1 9 4-1 6 2 6 6a7 7 0 11-14 0c0-3 2-5 3-7 1 3 3 3 4 1 1-3-1-6 2-9z" />
+          </svg>
+        </span>
+        <span class="brand__text">CWG<span class="brand__accent">Innovation</span></span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="platform.html">Platform</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="about.html" aria-current="page">About</a>
+        <a href="contact.html" class="btn btn--ghost nav__cta">Book a demo</a>
+      </nav>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="pagehead">
+      <div class="container">
+        <span class="eyebrow reveal">About us</span>
+        <h1 class="pagehead__title reveal">A small team with <span class="flame-text">a clear job</span></h1>
+        <p class="pagehead__lead reveal">CWG Innovation builds one thing and tries to build it well: a platform that puts the AI a business uses under a single roof, with the controls a business needs to use it responsibly.</p>
+      </div>
+    </section>
+
+    <!-- Story -->
+    <section class="section">
+      <div class="container split">
+        <div class="split__copy reveal">
+          <span class="eyebrow">Our story</span>
+          <h2>We got tired of the sprawl</h2>
+          <p class="lead">We spent years watching good teams collect a drawer full of AI tools, each with its own login, bill and surprises. The technology kept improving while the day-to-day kept getting messier.</p>
+          <p style="color:var(--muted)">So we built the layer we wanted: one place to connect models, set the rules, and get on with the actual work. That is the whole idea, and we keep the company small enough to stay close to it.</p>
+        </div>
+        <div class="split__media reveal" aria-hidden="true">
+          <div class="panel">
+            <div class="panel__bar"><span></span><span></span><span></span></div>
+            <div class="panel__body">
+              <div class="pill pill--hot">CWG Innovation</div>
+              <div class="meter"><i style="--w:100%"></i><b>Focus</b></div>
+              <div class="meter"><i style="--w:88%"></i><b>Support</b></div>
+              <div class="meter"><i style="--w:80%"></i><b>Pace</b></div>
+              <div class="panel__note">One product, looked after by the people who built it.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="section section--alt" id="values">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="eyebrow">How we work</span>
+          <h2>A few things we hold to</h2>
+        </header>
+        <div class="cards">
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="url(#flame)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>
+              </svg>
+            </div>
+            <h3>Plain over clever</h3>
+            <p>We would rather give you a straight answer and a working setup than a slide deck full of promises.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="url(#flame)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3l7 3v5c0 4.2-2.9 7.6-7 9-4.1-1.4-7-4.8-7-9V6l7-3z"/>
+              </svg>
+            </div>
+            <h3>Responsible by default</h3>
+            <p>Good controls should not be the expensive add-on. They are in the box, on from the start.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="url(#flame)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 12h7l-2-3M20 12h-7l2 3"/><circle cx="12" cy="12" r="9"/>
+              </svg>
+            </div>
+            <h3>Close to our customers</h3>
+            <p>We keep the team small so the person who answers your question is the person who can fix it.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta__inner reveal">
+        <div class="cta__glow" aria-hidden="true"></div>
+        <h2>Like the way we think?</h2>
+        <p>We are always happy to talk, whether you are ready to start or just weighing it up.</p>
+        <div class="hero__actions" style="justify-content:center">
+          <a href="contact.html" class="btn btn--primary">Get in touch</a>
+          <a href="platform.html" class="btn btn--ghost">See the platform</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="brand">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="24" height="24"><path fill="url(#flame)" d="M16 2c3 5 1 7-1 9 4-1 6 2 6 6a7 7 0 11-14 0c0-3 2-5 3-7 1 3 3 3 4 1 1-3-1-6 2-9z" /></svg>
+          </span>
+          <span class="brand__text">CWG<span class="brand__accent">Innovation</span></span>
+        </a>
+        <p>A single, governed home for the AI your business depends on.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Product</h4>
+        <a href="platform.html">Platform</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="contact.html">Book a demo</a>
+      </div>
+      <div class="footer__col">
+        <h4>Company</h4>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html#values">Our approach</a>
+      </div>
+      <div class="footer__col">
+        <h4>Get in touch</h4>
+        <a href="mailto:hello@cwginnovation.com">hello@cwginnovation.com</a>
+        <a href="contact.html">Talk to the team</a>
+      </div>
+    </div>
+    <div class="container footer__base">
+      <span>© <span id="year"></span> CWG Innovation. All rights reserved.</span>
+      <span class="footer__legal"><a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Security</a></span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
