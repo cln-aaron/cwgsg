@@ -534,6 +534,23 @@ main, .nav, .footer { position: relative; z-index: 1; }
   mix-blend-mode: soft-light;
 }
 
+/* Fused hero: team photo in front, Marina Bay skyline behind, blended together */
+.media-photo--fused { background-color: #0b0510; }
+.media-photo--fused img {
+  position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 66%;
+  object-fit: cover; object-position: center 28%;
+  filter: saturate(1.04) contrast(1.03);
+  -webkit-mask-image: linear-gradient(to top, #000 58%, transparent);
+          mask-image: linear-gradient(to top, #000 58%, transparent);
+}
+.media-photo--fused::after {
+  background: linear-gradient(170deg, rgba(232,17,45,0.16) 30%, rgba(123,47,240,0.30));
+  mix-blend-mode: soft-light;
+}
+.media-photo--fused::before {
+  background: linear-gradient(180deg, transparent 40%, rgba(11,5,16,0.5));
+}
+
 /* Card call-to-action link */
 .card__link {
   display: inline-block; margin-top: 1rem; font: 600 0.92rem "Sora";
