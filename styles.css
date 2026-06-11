@@ -654,3 +654,71 @@ main, .nav, .footer { position: relative; z-index: 1; }
   .team { grid-template-columns: 1fr; }
   .role { justify-content: flex-start; }
 }
+
+/* =========================================================
+   LIGHT CORPORATE THEME  (overrides the dark base above)
+   Bright white background, red/purple kept as accents
+   ========================================================= */
+:root {
+  --bg: #ffffff;
+  --bg-2: #f5f2fb;
+  --surface: #ffffff;
+  --surface-2: #f5f1fc;
+  --stroke: rgba(22, 14, 44, 0.10);
+  --stroke-strong: rgba(22, 14, 44, 0.18);
+  --text: #181226;
+  --muted: #57506c;
+  --faint: #8a8398;
+}
+
+/* drop the ember particles; keep a soft tint wash */
+#ember-canvas { display: none; }
+.aurora {
+  background:
+    radial-gradient(48% 52% at 14% 4%, rgba(232, 17, 45, 0.10), transparent 70%),
+    radial-gradient(52% 56% at 88% 2%, rgba(123, 47, 240, 0.10), transparent 70%),
+    radial-gradient(44% 48% at 56% 18%, rgba(255, 107, 53, 0.06), transparent 70%);
+  filter: blur(12px);
+}
+
+/* nav */
+.nav.is-scrolled {
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 8px 26px -18px rgba(22, 14, 44, 0.4);
+}
+.brand__logo { filter: none; }
+
+/* alternating sections + surfaces */
+.section--alt { background: linear-gradient(180deg, #ffffff, #f6f3fc 28%, #f6f3fc 72%, #ffffff); }
+.card, .solution, .step, .stat, .member, .role, .release,
+.contact__form, .contact__card, .media-contact, .cta__inner {
+  box-shadow: 0 16px 36px -28px rgba(22, 14, 44, 0.55);
+}
+
+/* panels (mock UI) become light cards */
+.panel {
+  background: linear-gradient(160deg, #ffffff, #f3eefb);
+  box-shadow: 0 26px 60px -38px rgba(123, 47, 240, 0.4);
+}
+
+/* CTA band -> light */
+.cta__inner { background: linear-gradient(160deg, #ffffff, #f5f1fc); border-color: var(--stroke); }
+.cta__glow {
+  background: radial-gradient(50% 60% at 50% 100%, rgba(232,17,45,0.16), transparent 60%),
+              radial-gradient(60% 60% at 30% 100%, rgba(123,47,240,0.16), transparent 60%);
+}
+
+/* footer -> light */
+.footer { background: #f7f4fc; }
+
+/* form fields -> white */
+.field-block input, .field-block select, .field-block textarea { background: #ffffff; }
+.cta__form input { background: #ffffff; }
+.media-contact { background: linear-gradient(160deg, #ffffff, #f5f1fc); }
+
+/* chips need solid fill to stay readable on light */
+.pill--hot, .release__tag { background: var(--fire); color: #ffffff; border-color: transparent; }
+
+/* mobile menu panel -> white */
+@media (max-width: 1040px) { .nav__links { background: rgba(255, 255, 255, 0.98); } }
+@media (max-width: 900px)  { .nav__links { background: rgba(255, 255, 255, 0.98); } }
