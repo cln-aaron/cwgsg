@@ -138,9 +138,15 @@ main, .nav, .footer { position: relative; z-index: 1; }
   background: var(--fire); -webkit-background-clip: text; background-clip: text; color: transparent;
   margin-left: 2px;
 }
-.brand__logo { height: 30px; width: auto; display: block; }
+/* Logo: brightened + soft glow so the deep-purple mark reads on the dark header */
+.brand__logo {
+  height: 32px; width: auto; display: block;
+  filter: brightness(1.5) saturate(1.1)
+          drop-shadow(0 0 0.5px rgba(255,255,255,0.35))
+          drop-shadow(0 2px 9px rgba(123,47,240,0.6));
+}
 .brand__suffix { font: 600 1.12rem "Sora", sans-serif; letter-spacing: -0.01em; color: var(--text); }
-.footer .brand__logo { height: 24px; }
+.footer .brand__logo { height: 26px; }
 .footer .brand__suffix { font-size: 1.02rem; }
 /* Card icons use a solid brand stroke (overrides the inline gradient ref) */
 .card__icon svg { stroke: var(--red); }
@@ -484,4 +490,144 @@ main, .nav, .footer { position: relative; z-index: 1; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
   html { scroll-behavior: auto; }
+}
+
+/* =========================================================
+   Additions: photos, team, careers, newsroom, contact details
+   ========================================================= */
+
+/* Narrow content column */
+.container.narrow { width: min(880px, 92vw); }
+
+/* Themed photo frame with red/purple duotone + graceful gradient fallback */
+.media-photo {
+  position: relative; border-radius: var(--radius); overflow: hidden;
+  border: 1px solid var(--stroke-strong);
+  background: linear-gradient(150deg, var(--purple-deep), var(--red-deep));
+  box-shadow: 0 30px 80px -30px rgba(123, 47, 240, 0.55), 0 0 0 1px rgba(255,255,255,0.02);
+}
+.media-photo img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  filter: grayscale(0.35) saturate(1.05) contrast(1.03);
+}
+.media-photo::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(150deg, rgba(232,17,45,0.42), rgba(123,47,240,0.5));
+  mix-blend-mode: overlay;
+}
+.media-photo::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 1;
+  background: linear-gradient(180deg, transparent 55%, rgba(11,5,16,0.55));
+}
+
+/* Hero photo (replaces the orb) */
+.hero__photo { width: min(440px, 82vw); aspect-ratio: 4 / 5; }
+.hero__visual { display: grid; place-items: center; }
+
+/* Generated artwork: keep its own colours, skip the duotone treatment */
+.media-photo--art::after, .media-photo--art::before { display: none; }
+.media-photo--art img { filter: none; }
+
+/* Card call-to-action link */
+.card__link {
+  display: inline-block; margin-top: 1rem; font: 600 0.92rem "Sora";
+  color: var(--red);
+}
+.card__link::after { content: " \2192"; transition: margin 0.25s var(--ease); }
+.card:hover .card__link::after { margin-left: 4px; }
+
+/* Team */
+.team { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+.member {
+  padding: 2rem 1.8rem; border-radius: var(--radius);
+  border: 1px solid var(--stroke); background: var(--surface);
+  transition: transform 0.35s var(--ease), border-color 0.35s;
+}
+.member:hover { transform: translateY(-5px); border-color: var(--stroke-strong); }
+.member__avatar {
+  width: 76px; height: 76px; border-radius: 50%; overflow: hidden;
+  display: grid; place-items: center; margin-bottom: 1.1rem;
+  background: linear-gradient(135deg, var(--purple-deep), var(--red));
+  border: 1px solid var(--stroke-strong);
+}
+.member__avatar img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(0.3) saturate(1.05); }
+.member h3 { font-size: 1.18rem; margin-bottom: 0.2rem; }
+.member__role { display: block; font: 600 0.82rem "Sora"; color: var(--red); margin-bottom: 0.7rem; }
+.member p { color: var(--muted); font-size: 0.95rem; }
+.team__note { text-align: center; color: var(--faint); font-size: 0.9rem; margin-top: 2rem; }
+
+/* Careers: open roles */
+.roles { display: grid; gap: 1rem; }
+.role {
+  display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap;
+  padding: 1.4rem 1.8rem; border-radius: var(--radius);
+  border: 1px solid var(--stroke); background: var(--surface);
+  transition: border-color 0.3s, transform 0.3s var(--ease);
+}
+.role:hover { border-color: var(--stroke-strong); transform: translateY(-2px); }
+.role__main h3 { font-size: 1.18rem; margin-bottom: 0.2rem; }
+.role__meta { font-size: 0.88rem; color: var(--faint); }
+.role .btn { flex: 0 0 auto; }
+
+/* Newsroom: releases */
+.releases { display: grid; gap: 1.2rem; }
+.release {
+  padding: 1.8rem 2rem; border-radius: var(--radius);
+  border: 1px solid var(--stroke); background: var(--surface);
+  transition: border-color 0.3s, transform 0.3s var(--ease), background 0.3s;
+}
+.release:hover { border-color: var(--stroke-strong); transform: translateY(-3px); background: var(--surface-2); }
+.release__meta {
+  display: flex; align-items: center; gap: 0.9rem; margin-bottom: 0.7rem;
+  font-size: 0.78rem; color: var(--faint); text-transform: uppercase; letter-spacing: 0.1em;
+}
+.release__tag {
+  color: #fff; padding: 0.25rem 0.7rem; border-radius: 999px; letter-spacing: 0.06em;
+  background: linear-gradient(135deg, rgba(232,17,45,0.3), rgba(123,47,240,0.3));
+  border: 1px solid var(--stroke-strong);
+}
+.release h3 { font-size: 1.3rem; line-height: 1.25; margin-bottom: 0.5rem; letter-spacing: -0.01em; }
+.release p { color: var(--muted); margin-bottom: 0.8rem; }
+.release__link { font: 600 0.92rem "Sora"; color: var(--red); }
+.release__link::after { content: " \2192"; }
+
+.media-contact {
+  margin-top: 2.4rem; padding: 2rem; border-radius: var(--radius);
+  border: 1px solid var(--stroke-strong);
+  background: linear-gradient(160deg, rgba(18,10,29,0.7), rgba(11,5,16,0.7));
+}
+.media-contact h3 { font-size: 1.2rem; margin-bottom: 0.4rem; }
+.media-contact p { color: var(--muted); margin-bottom: 0.6rem; }
+
+/* Company details */
+.footer__address {
+  font-style: normal; color: var(--muted); font-size: 0.9rem; line-height: 1.7; margin-top: 1rem;
+}
+.footer__address a { color: var(--muted); }
+.footer__address a:hover { color: var(--red); }
+.contact__address { font-style: normal; color: var(--muted); font-size: 0.94rem; line-height: 1.6; }
+
+/* Navigation: collapse to menu earlier now that there are more links */
+.nav__links { gap: 1.5rem; }
+.nav__links a:not(.btn) { font-size: 0.92rem; }
+@media (max-width: 1040px) {
+  .nav__toggle { display: flex; }
+  .nav__links {
+    position: fixed; inset: 72px 0 auto 0; flex-direction: column; gap: 0.4rem; align-items: stretch;
+    background: rgba(11,5,16,0.97); backdrop-filter: blur(16px);
+    padding: 1.5rem 6vw 2rem; border-bottom: 1px solid var(--stroke);
+    transform: translateY(-130%); transition: transform 0.4s var(--ease);
+  }
+  .nav__links.is-open { transform: none; }
+  .nav__links a { padding: 0.7rem 0; font-size: 1.05rem; }
+  .nav__cta { text-align: center; margin-top: 0.5rem; }
+}
+
+@media (max-width: 900px) {
+  .team { grid-template-columns: 1fr 1fr; }
+  .hero__photo { width: min(360px, 78vw); }
+}
+@media (max-width: 560px) {
+  .team { grid-template-columns: 1fr; }
+  .role { justify-content: flex-start; }
 }
