@@ -4,13 +4,15 @@
    ========================================================= */
 
 :root {
-  /* Brand palette */
-  --red: #ff2d55;
-  --red-deep: #e11d48;
+  /* Brand palette — drawn from the CWG logo (royal purple + true red) */
+  --red: #e8112d;
+  --red-deep: #c10020;
   --ember: #ff6b35;
-  --purple: #a855f7;
-  --purple-deep: #7c3aed;
-  --magenta: #d946ef;
+  --purple: #7b2ff0;
+  --purple-deep: #4d12a6;
+  --magenta: #c026d3;
+  --brand-purple: #4d12a6;
+  --brand-red: #d6001c;
 
   /* Surfaces */
   --bg: #0b0510;
@@ -136,6 +138,12 @@ main, .nav, .footer { position: relative; z-index: 1; }
   background: var(--fire); -webkit-background-clip: text; background-clip: text; color: transparent;
   margin-left: 2px;
 }
+.brand__logo { height: 30px; width: auto; display: block; }
+.brand__suffix { font: 600 1.12rem "Sora", sans-serif; letter-spacing: -0.01em; color: var(--text); }
+.footer .brand__logo { height: 24px; }
+.footer .brand__suffix { font-size: 1.02rem; }
+/* Card icons use a solid brand stroke (overrides the inline gradient ref) */
+.card__icon svg { stroke: var(--red); }
 .nav__links { display: flex; align-items: center; gap: 2rem; }
 .nav__links a { color: var(--muted); font: 500 0.94rem "Inter"; transition: color 0.2s; }
 .nav__links a:not(.btn):hover { color: var(--text); }

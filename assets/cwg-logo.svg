@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 46" role="img" aria-label="CWG">
+  <g fill="none" stroke="#4d12a6" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+    <!-- C -->
+    <path d="M32.54 10.79 A15.5 15.5 0 1 0 32.54 35.21" />
+    <!-- W -->
+    <path d="M43 11 L51 35 L59 20 L67 35 L75 11" />
+    <!-- G -->
+    <path d="M114.54 10.79 A15.5 15.5 0 1 0 114.54 35.21" />
+    <path d="M114.54 23 L104.5 23" />
+  </g>
+  <!-- Red accent on the G -->
+  <path d="M109 25 H119 V35 L114 43 L109 35 Z" fill="#d6001c" />
+</svg>

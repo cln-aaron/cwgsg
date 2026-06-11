@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#0b0510" />
   <title>Contact | CWG Innovation</title>
-  <meta name="description" content="Book a demo or talk to the CWG Innovation team about putting a single intelligence platform to work." />
+  <meta name="description" content="Get in touch or talk to the CWG Innovation team about putting a single intelligence platform to work." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='1' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%23ff2d55'/%3E%3Cstop offset='1' stop-color='%23a855f7'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url(%23g)' d='M16 2c3 5 1 7-1 9 4-1 6 2 6 6a7 7 0 11-14 0c0-3 2-5 3-7 1 3 3 3 4 1 1-3-1-6 2-9z'/%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='2' y='2' width='28' height='28' rx='8' fill='%234d12a6'/%3E%3Cpath d='M30 21v9h-9z' fill='%23d6001c'/%3E%3C/svg%3E" />
 </head>
 <body>
   <canvas id="ember-canvas" aria-hidden="true"></canvas>
@@ -19,26 +19,15 @@
   <header class="nav" id="nav">
     <div class="nav__inner">
       <a href="index.html" class="brand" aria-label="CWG Innovation home">
-        <span class="brand__mark" aria-hidden="true">
-          <svg viewBox="0 0 32 32" width="28" height="28">
-            <defs>
-              <linearGradient id="flame" x1="0" y1="1" x2="1" y2="0">
-                <stop offset="0" stop-color="#ff2d55" />
-                <stop offset="0.5" stop-color="#ff6b35" />
-                <stop offset="1" stop-color="#a855f7" />
-              </linearGradient>
-            </defs>
-            <path fill="url(#flame)" d="M16 2c3 5 1 7-1 9 4-1 6 2 6 6a7 7 0 11-14 0c0-3 2-5 3-7 1 3 3 3 4 1 1-3-1-6 2-9z" />
-          </svg>
-        </span>
-        <span class="brand__text">CWG<span class="brand__accent">Innovation</span></span>
+        <img class="brand__logo" src="assets/cwg-logo.svg" alt="CWG" width="100" height="36" />
+        <span class="brand__suffix">Innovation</span>
       </a>
       <nav class="nav__links" aria-label="Primary">
         <a href="index.html">Home</a>
-        <a href="platform.html">Platform</a>
-        <a href="solutions.html">Solutions</a>
         <a href="about.html">About</a>
-        <a href="contact.html" class="btn btn--ghost nav__cta" aria-current="page">Book a demo</a>
+        <a href="what-we-do.html">What we do</a>
+        <a href="platform.html">Platform</a>
+        <a href="contact.html" class="btn btn--ghost nav__cta" aria-current="page">Get in touch</a>
       </nav>
       <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -121,24 +110,21 @@
     <div class="container footer__grid">
       <div class="footer__brand">
         <a href="index.html" class="brand">
-          <span class="brand__mark" aria-hidden="true">
-            <svg viewBox="0 0 32 32" width="24" height="24"><path fill="url(#flame)" d="M16 2c3 5 1 7-1 9 4-1 6 2 6 6a7 7 0 11-14 0c0-3 2-5 3-7 1 3 3 3 4 1 1-3-1-6 2-9z" /></svg>
-          </span>
-          <span class="brand__text">CWG<span class="brand__accent">Innovation</span></span>
+          <img class="brand__logo" src="assets/cwg-logo.svg" alt="CWG" width="92" height="33" />
+          <span class="brand__suffix">Innovation</span>
         </a>
-        <p>A single, governed home for the AI your business depends on.</p>
-      </div>
-      <div class="footer__col">
-        <h4>Product</h4>
-        <a href="platform.html">Platform</a>
-        <a href="solutions.html">Solutions</a>
-        <a href="contact.html">Book a demo</a>
+        <p>An innovation company helping businesses put new technology to good use.</p>
       </div>
       <div class="footer__col">
         <h4>Company</h4>
         <a href="about.html">About</a>
+        <a href="what-we-do.html">What we do</a>
         <a href="contact.html">Contact</a>
-        <a href="about.html#values">Our approach</a>
+      </div>
+      <div class="footer__col">
+        <h4>What we build</h4>
+        <a href="platform.html">Platform</a>
+        <a href="solutions.html">Solutions</a>
       </div>
       <div class="footer__col">
         <h4>Get in touch</h4>
@@ -147,8 +133,8 @@
       </div>
     </div>
     <div class="container footer__base">
-      <span>© <span id="year"></span> CWG Innovation. All rights reserved.</span>
-      <span class="footer__legal"><a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="#">Security</a></span>
+      <span>&copy; <span id="year"></span> CWG Innovation. All rights reserved.</span>
+      <span class="footer__legal"><a href="#">Privacy</a> &middot; <a href="#">Terms</a> &middot; <a href="#">Security</a></span>
     </div>
   </footer>
 
