@@ -773,3 +773,6 @@ main, .nav, .footer { position: relative; z-index: 1; }
 .cta__glow {
   background: radial-gradient(55% 65% at 50% 100%, rgba(77, 18, 166, 0.12), transparent 62%);
 }
+
+/* neutral shadow on media frames (was a purple glow) */
+.media-photo { box-shadow: 0 22px 55px -34px rgba(22, 14, 44, 0.40); }
