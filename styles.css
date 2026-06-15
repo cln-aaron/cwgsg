@@ -833,7 +833,7 @@ main, .nav, .footer { position: relative; z-index: 1; }
 @media (max-width: 980px) { .cards--four { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .cards--four { grid-template-columns: 1fr; } }
 
-/* Logo suffix refinement: dark ink with a red G (echoes the CWG mark) */
+/* Logo suffix: clean all-dark "SG" beside the CWG mark */
 .brand__suffix { color: #15101f; font: 800 1.06rem "Sora", sans-serif; letter-spacing: 0.005em; }
-.brand__suffix-g { color: #d6001c; }
+.brand__suffix-g { color: inherit; }
 .footer .brand__suffix { color: #15101f; font-size: 0.98rem; }
