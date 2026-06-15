@@ -808,3 +808,21 @@ main, .nav, .footer { position: relative; z-index: 1; }
   color: var(--purple-deep);
 }
 .case__soon::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--red); }
+
+/* Under-construction / coming-soon page state */
+.coming { text-align: center; max-width: 44rem; margin-inline: auto; padding: 1rem 0 2rem; }
+.coming__mark {
+  width: 86px; height: 86px; margin: 0 auto 1.6rem; display: grid; place-items: center;
+  border-radius: 22px; background: rgba(77, 18, 166, 0.07); border: 1px solid var(--stroke);
+}
+.coming .case__soon { justify-content: center; margin: 0 0 0.8rem; }
+.coming h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); letter-spacing: -0.02em; margin-bottom: 0.8rem; }
+.coming p { color: var(--muted); font-size: 1.05rem; margin-bottom: 1.8rem; }
+
+/* Two-column tick list (centered section) */
+.ticks--two { grid-template-columns: 1fr 1fr; gap: 0.9rem 2.2rem; max-width: 760px; margin-inline: auto; text-align: left; }
+@media (max-width: 640px) { .ticks--two { grid-template-columns: 1fr; } }
+
+/* Logo wordmark: "SG" reads as part of the CWG mark */
+.brand { gap: 0.4rem; }
+.brand__suffix { color: #4d12a6; font-weight: 700; }
