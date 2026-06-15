@@ -776,3 +776,27 @@ main, .nav, .footer { position: relative; z-index: 1; }
 
 /* neutral shadow on media frames (was a purple glow) */
 .media-photo { box-shadow: 0 22px 55px -34px rgba(22, 14, 44, 0.40); }
+
+/* =========================================================
+   Case-study / outcome card (repurposed from the mock panel)
+   ========================================================= */
+.case {
+  position: relative; padding: 2.2rem; border-radius: var(--radius);
+  border: 1px solid var(--stroke); background: #ffffff;
+  box-shadow: 0 22px 50px -34px rgba(22, 14, 44, 0.4);
+}
+.case__tag {
+  display: inline-block; font: 600 0.72rem "Sora"; letter-spacing: 0.12em; text-transform: uppercase;
+  color: #4d12a6; background: rgba(77, 18, 166, 0.08);
+  padding: 0.3rem 0.7rem; border-radius: 999px; margin-bottom: 1.1rem;
+}
+.case__metric {
+  font: 800 clamp(2.4rem, 5vw, 3.2rem) "Sora"; letter-spacing: -0.03em;
+  color: var(--red); line-height: 1; margin-bottom: 0.6rem;
+}
+.case__title { font-size: 1.2rem; margin-bottom: 0.5rem; letter-spacing: -0.01em; }
+.case p { color: var(--muted); }
+.case__foot {
+  display: block; margin-top: 1rem; font-size: 0.78rem; color: var(--faint);
+  letter-spacing: 0.04em;
+}
