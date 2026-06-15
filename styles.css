@@ -339,7 +339,7 @@ main, .nav, .footer { position: relative; z-index: 1; }
 .step p { color: var(--muted); }
 
 /* Solutions */
-.solutions { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+.solutions { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.4rem; }
 .solution {
   padding: 2rem; border-radius: var(--radius); border: 1px solid var(--stroke);
   background: var(--surface); transition: transform 0.35s var(--ease), border-color 0.35s;
@@ -520,7 +520,7 @@ main, .nav, .footer { position: relative; z-index: 1; }
 }
 
 /* Hero photo (replaces the orb) */
-.hero__photo { width: min(440px, 82vw); aspect-ratio: 4 / 5; }
+.hero__photo { width: min(420px, 82vw); aspect-ratio: 1 / 1; }
 .hero__visual { display: grid; place-items: center; }
 
 /* Generated artwork: keep its own colours, skip the duotone treatment */
@@ -826,3 +826,9 @@ main, .nav, .footer { position: relative; z-index: 1; }
 /* Logo wordmark: "SG" reads as part of the CWG mark */
 .brand { gap: 0.4rem; }
 .brand__suffix { color: #4d12a6; font-weight: 700; }
+
+
+/* Four-up card grid (e.g. careers perks) */
+.cards--four { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 980px) { .cards--four { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .cards--four { grid-template-columns: 1fr; } }
