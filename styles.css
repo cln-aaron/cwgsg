@@ -868,3 +868,31 @@ main, .nav, .footer { position: relative; z-index: 1; }
 .edvance-logo { font: 800 1.45rem "Sora", sans-serif; letter-spacing: -0.02em; line-height: 1; }
 .ev-ed { color: #c8017f; }
 .ev-vance { color: #0e2a5e; }
+
+
+/* Team leadership initial avatar */
+.member__initial { color: #fff; font: 800 1.7rem "Sora", sans-serif; }
+
+/* Events page card */
+.event { padding: 2.4rem; border-radius: var(--radius); border: 1px solid var(--stroke); background: #fff; box-shadow: 0 22px 50px -34px rgba(22,14,44,0.4); }
+.event__meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.8rem; font-size: 0.8rem; color: var(--faint); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.7rem; }
+.event__tag { color: #fff; background: var(--fire); padding: 0.25rem 0.7rem; border-radius: 999px; }
+.event h2 { font-size: clamp(1.7rem, 3.5vw, 2.3rem); letter-spacing: -0.02em; margin-bottom: 0.4rem; }
+.event__where { color: var(--muted); margin-bottom: 1.6rem; }
+.event__where strong { color: var(--text); }
+.event__session { border-top: 1px solid var(--stroke); padding-top: 1.6rem; }
+.event__session h3 { font-size: 1.3rem; line-height: 1.3; margin: 0.6rem 0 0.4rem; }
+.event__when { color: var(--red); font-weight: 600; margin-bottom: 1rem; }
+.event__when strong { color: var(--text); }
+.event__session p { color: var(--muted); margin-bottom: 0.9rem; }
+
+/* Homepage event strip */
+.event-strip { display: flex; align-items: center; justify-content: space-between; gap: 1.6rem; flex-wrap: wrap; padding: 1.8rem 2rem; border-radius: var(--radius); border: 1px solid var(--stroke); background: #fff; box-shadow: 0 16px 36px -28px rgba(22,14,44,0.5); }
+.event-strip__main { flex: 1 1 460px; }
+.event-strip__main h3 { font-size: 1.2rem; line-height: 1.3; margin: 0.6rem 0 0.4rem; }
+.event-strip__main p { color: var(--muted); }
+
+/* Featured single leadership card */
+.member--feature { display: flex; gap: 1.4rem; align-items: flex-start; max-width: 560px; margin-inline: auto; text-align: left; }
+.member--feature .member__avatar { margin-bottom: 0; flex: 0 0 auto; }
+.member--feature .member__body { flex: 1 1 auto; }
