@@ -853,3 +853,18 @@ main, .nav, .footer { position: relative; z-index: 1; }
   background: rgba(77, 18, 166, 0.08); border: 1px solid var(--stroke);
   padding: 0.34rem 0.72rem; border-radius: 999px;
 }
+
+
+/* Footer partner endorsement (Edvance / HKEX:1410) */
+.footer__partner {
+  display: flex; align-items: center; justify-content: center; gap: 0.9rem; flex-wrap: wrap;
+  padding: 1.3rem 0; border-top: 1px solid var(--stroke); text-align: center;
+}
+.footer__partner-logo { height: 30px; width: auto; }
+.footer__partner-text { color: var(--muted); font-size: 0.9rem; }
+.footer__partner-text strong { color: var(--text); font-weight: 600; }
+
+/* Edvance wordmark lockup (footer partner) */
+.edvance-logo { font: 800 1.45rem "Sora", sans-serif; letter-spacing: -0.02em; line-height: 1; }
+.ev-ed { color: #c8017f; }
+.ev-vance { color: #0e2a5e; }
