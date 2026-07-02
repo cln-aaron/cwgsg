@@ -927,7 +927,7 @@ main, .nav, .footer { position: relative; z-index: 1; }
 /* Partners page */
 .partner-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.4rem; }
 /* Pyramid: two lead partners on top, three below */
-.partner-grid--top { grid-template-columns: repeat(2, 1fr); max-width: 760px; margin-inline: auto; margin-bottom: 1.4rem; }
+.partner-grid--top { grid-template-columns: repeat(2, 1fr); margin-bottom: 1.4rem; }
 .partner-grid--bottom { grid-template-columns: repeat(3, 1fr); }
 @media (max-width: 860px) {
   .partner-grid--top, .partner-grid--bottom { grid-template-columns: 1fr 1fr; max-width: none; }
