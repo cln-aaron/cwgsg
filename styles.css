@@ -947,6 +947,11 @@ main, .nav, .footer { position: relative; z-index: 1; }
   border: 1px solid rgba(214, 0, 28, 0.18); border-radius: 999px;
 }
 .partner-card__body p { color: var(--muted); margin-top: 0.9rem; }
+.partner-card__link {
+  display: inline-block; margin-top: 0.7rem; font-weight: 600; font-size: 0.9rem;
+  color: var(--red); word-break: break-word; transition: color 0.2s;
+}
+.partner-card__link:hover { color: var(--purple-deep); }
 
 /* =========================================================
    NAV DROPDOWN  (desktop hover + mobile accordion)
