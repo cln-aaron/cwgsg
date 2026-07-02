@@ -520,7 +520,8 @@ main, .nav, .footer { position: relative; z-index: 1; }
 }
 
 /* Hero photo (replaces the orb) */
-.hero__photo { width: min(420px, 82vw); aspect-ratio: 1 / 1; }
+.hero__photo { width: min(500px, 92vw); aspect-ratio: 3 / 2; }
+.hero__photo img { object-position: center; }
 .hero__visual { display: grid; place-items: center; }
 
 /* Generated artwork: keep its own colours, skip the duotone treatment */
