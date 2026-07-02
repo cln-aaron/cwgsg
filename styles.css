@@ -922,3 +922,27 @@ main, .nav, .footer { position: relative; z-index: 1; }
   box-shadow: 0 30px 60px -38px rgba(22, 14, 44, 0.45);
 }
 .rr-card img { width: 100%; max-width: 420px; height: auto; display: block; }
+
+/* Partners page */
+.partner-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.4rem; }
+.partner-card {
+  display: flex; flex-direction: column; gap: 1.4rem;
+  padding: 1.8rem; border-radius: var(--radius);
+  background: var(--surface); border: 1px solid var(--stroke);
+  transition: transform 0.4s var(--ease), border-color 0.4s;
+}
+.partner-card:hover { transform: translateY(-5px); border-color: var(--stroke-strong); }
+.partner-card__plate {
+  display: grid; place-items: center; min-height: 120px;
+  padding: 1.6rem 1.8rem; background: #fff;
+  border: 1px solid var(--stroke); border-radius: var(--radius-sm);
+}
+.partner-card__plate img { width: 100%; max-width: 240px; height: auto; display: block; }
+.partner-card__name { font-size: 1.25rem; margin: 0; letter-spacing: -0.01em; }
+.partner-card__badge {
+  display: inline-block; margin-top: 0.5rem; padding: 0.2rem 0.6rem;
+  font: 600 0.72rem "Sora", sans-serif; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--red); background: rgba(214, 0, 28, 0.08);
+  border: 1px solid rgba(214, 0, 28, 0.18); border-radius: 999px;
+}
+.partner-card__body p { color: var(--muted); margin-top: 0.9rem; }
