@@ -19,10 +19,38 @@
     const open = links.classList.toggle("is-open");
     toggle.setAttribute("aria-expanded", String(open));
   });
+  /* ---------- Nav dropdown menus ---------- */
+  const dropdowns = document.querySelectorAll(".nav__item--has-menu");
+  const closeDropdowns = (except) => {
+    dropdowns.forEach((item) => {
+      if (item === except) return;
+      item.classList.remove("is-open");
+      const t = item.querySelector(".nav__trigger");
+      if (t) t.setAttribute("aria-expanded", "false");
+    });
+  };
+  dropdowns.forEach((item) => {
+    const trigger = item.querySelector(".nav__trigger");
+    if (!trigger) return;
+    trigger.addEventListener("click", (e) => {
+      e.preventDefault();
+      const open = item.classList.toggle("is-open");
+      trigger.setAttribute("aria-expanded", String(open));
+      closeDropdowns(item);
+    });
+  });
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".nav__item--has-menu")) closeDropdowns(null);
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeDropdowns(null);
+  });
+
   links.addEventListener("click", (e) => {
-    if (e.target.tagName === "A") {
+    if (e.target.closest("a")) {
       links.classList.remove("is-open");
       toggle.setAttribute("aria-expanded", "false");
+      closeDropdowns(null);
     }
   });
 
