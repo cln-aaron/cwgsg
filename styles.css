@@ -1110,3 +1110,8 @@ main, .nav, .footer { position: relative; z-index: 1; }
 .event__gallery img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius-sm); border: 1px solid var(--stroke); display: block; }
 .event__gallery figcaption { margin-top: 0.5rem; font-size: 0.82rem; color: var(--faint); line-height: 1.4; }
 @media (max-width: 640px) { .event__gallery { grid-template-columns: 1fr; } }
+
+/* Event editorial photo (full-width within the article) */
+.event__figure { margin: 1.6rem 0; }
+.event__figure img { width: 100%; height: auto; border-radius: var(--radius-sm); border: 1px solid var(--stroke); display: block; }
+.event__figure figcaption { margin-top: 0.55rem; font-size: 0.82rem; color: var(--faint); line-height: 1.45; }
