@@ -1093,3 +1093,13 @@ main, .nav, .footer { position: relative; z-index: 1; }
 }
 .cookie-notice__ok:hover { background: #f0eaf9; }
 @media (max-width: 560px) { .cookie-notice { flex-direction: column; align-items: stretch; text-align: left; } }
+
+/* Event recap extras */
+.event__points-title { font-weight: 600; color: var(--text); margin: 1.1rem 0 0.4rem; }
+.event__points { margin: 0 0 0.4rem 1.1rem; padding: 0; }
+.event__points li { color: var(--muted); line-height: 1.7; margin-bottom: 0.5rem; }
+.coverage { margin-top: 1.8rem; padding-top: 1.4rem; border-top: 1px solid var(--stroke); }
+.coverage p { color: var(--muted); margin: 0.4rem 0 0.7rem; }
+.coverage__list { list-style: none; display: flex; flex-wrap: wrap; gap: 0.6rem 1.6rem; margin: 0; padding: 0; }
+.coverage__list a { color: var(--red); font-weight: 600; }
+.coverage__list a:hover { color: var(--purple-deep); }
