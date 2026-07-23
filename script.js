@@ -111,7 +111,7 @@
   const form = document.getElementById("leadForm");
   const note = document.getElementById("formNote");
   if (form) {
-    form.addEventListener("submit", (e) => {
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
       const email = form.email.value.trim();
       const name = form.name.value.trim();
@@ -121,12 +121,36 @@
         note.textContent = "Please add your name and a valid work email so we can reply.";
         return;
       }
-      // Capture consent evidence with the submission (posted when a backend/form service is wired up).
-      var ts = document.getElementById("consentTimestamp");
+      // Capture consent evidence with the submission.
+      const ts = document.getElementById("consentTimestamp");
       if (ts) ts.value = new Date().toISOString();
-      note.style.color = "var(--ember)";
-      note.textContent = "Thanks, " + name.split(" ")[0] + ". We'll be in touch within one working day.";
-      form.reset();
+      const btn = form.querySelector('button[type="submit"]');
+      if (btn) btn.disabled = true;
+      note.style.color = "var(--muted)";
+      note.textContent = "Sending…";
+      try {
+        const res = await fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { Accept: "application/json" },
+        });
+        if (res.ok) {
+          note.style.color = "var(--ember)";
+          note.textContent = "Thanks, " + name.split(" ")[0] + ". We'll be in touch within one working day.";
+          form.reset();
+        } else {
+          const data = await res.json().catch(() => ({}));
+          note.style.color = "var(--red)";
+          note.textContent =
+            (data.errors && data.errors.map((x) => x.message).join(", ")) ||
+            "Sorry, something went wrong. Please email hello@cwgsg.ai.";
+        }
+      } catch (err) {
+        note.style.color = "var(--red)";
+        note.textContent = "Network error — please email hello@cwgsg.ai.";
+      } finally {
+        if (btn) btn.disabled = false;
+      }
     });
   }
 
