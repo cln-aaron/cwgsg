@@ -121,11 +121,35 @@
         note.textContent = "Please add your name and a valid work email so we can reply.";
         return;
       }
+      // Capture consent evidence with the submission (posted when a backend/form service is wired up).
+      var ts = document.getElementById("consentTimestamp");
+      if (ts) ts.value = new Date().toISOString();
       note.style.color = "var(--ember)";
       note.textContent = "Thanks, " + name.split(" ")[0] + ". We'll be in touch within one working day.";
       form.reset();
     });
   }
+
+  /* ---------- Cookie notice (strictly-necessary only) ---------- */
+  (function () {
+    try {
+      if (localStorage.getItem("cwg_cookie_ack")) return;
+    } catch (e) { /* storage blocked — show each visit */ }
+    var bar = document.createElement("div");
+    bar.className = "cookie-notice";
+    bar.setAttribute("role", "region");
+    bar.setAttribute("aria-label", "Cookie notice");
+    bar.innerHTML =
+      '<span>This site uses only strictly necessary cookies that make it work and keep it secure. ' +
+      "We don't use tracking or advertising cookies. " +
+      '<a href="privacy.html#cookies">Learn more</a>.</span>' +
+      '<button type="button" class="cookie-notice__ok">Got it</button>';
+    document.body.appendChild(bar);
+    bar.querySelector(".cookie-notice__ok").addEventListener("click", function () {
+      try { localStorage.setItem("cwg_cookie_ack", "1"); } catch (e) {}
+      bar.remove();
+    });
+  })();
 
   /* ---------- Year ---------- */
   const yr = document.getElementById("year");

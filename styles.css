@@ -1039,3 +1039,57 @@ main, .nav, .footer { position: relative; z-index: 1; }
   .nav__group { min-width: 0; }
   .nav__group-title { padding: 0.5rem 0 0.1rem; font-size: 0.64rem; }
 }
+
+/* =========================================================
+   LEGAL / SECURITY PAGES + COMPLIANCE UI
+   ========================================================= */
+.legal { max-width: 820px; margin-inline: auto; }
+.legal > p { color: var(--muted); line-height: 1.75; margin-bottom: 1rem; }
+.legal h2 { font-size: 1.35rem; letter-spacing: -0.01em; margin: 2.2rem 0 0.7rem; }
+.legal h2:first-of-type { margin-top: 0.5rem; }
+.legal ul { margin: 0 0 1rem 1.1rem; padding: 0; }
+.legal li { color: var(--muted); line-height: 1.7; margin-bottom: 0.45rem; }
+.legal a { color: var(--red); font-weight: 600; }
+.legal a:hover { color: var(--purple-deep); }
+.legal strong { color: var(--text); }
+.legal__scope { padding: 0.9rem 1.1rem; background: var(--surface-2); border: 1px solid var(--stroke); border-radius: var(--radius-sm); }
+.legal__disclaimer { margin-top: 2.4rem; padding-top: 1.2rem; border-top: 1px solid var(--stroke); font-size: 0.9rem; font-style: italic; }
+.compliance-note {
+  padding: 0.9rem 1.1rem; margin: 0 0 1.6rem; border-radius: var(--radius-sm);
+  background: rgba(214, 0, 28, 0.05); border: 1px solid rgba(214, 0, 28, 0.16);
+  color: var(--muted); font-size: 0.92rem; line-height: 1.6;
+}
+
+/* Security FAQ */
+.faq { display: grid; gap: 0.8rem; margin-top: 0.6rem; }
+.faq__item { padding: 1.2rem 1.4rem; background: var(--surface); border: 1px solid var(--stroke); border-radius: var(--radius-sm); }
+.faq__item h3 { font-size: 1.05rem; margin: 0 0 0.4rem; }
+.faq__item p { color: var(--muted); margin: 0; line-height: 1.65; }
+
+/* Compliance note used inline on marketing pages (centered, small) */
+.claim-note {
+  max-width: 720px; margin: 2rem auto 0; text-align: center;
+  color: var(--faint); font-size: 0.85rem; line-height: 1.6;
+}
+.claim-note a { color: var(--red); font-weight: 600; }
+
+/* Contact form consent block */
+.form-consent { margin: 1.1rem 0 0.4rem; font-size: 0.88rem; color: var(--muted); line-height: 1.6; }
+.form-consent a { color: var(--red); font-weight: 600; }
+.form-optin { display: flex; gap: 0.6rem; align-items: flex-start; margin: 0.9rem 0 0.2rem; font-size: 0.9rem; color: var(--muted); cursor: pointer; }
+.form-optin input { margin-top: 0.2rem; flex: 0 0 auto; width: 16px; height: 16px; accent-color: var(--purple-deep); }
+
+/* Cookie notice (strictly-necessary only) */
+.cookie-notice {
+  position: fixed; left: 1rem; right: 1rem; bottom: 1rem; max-width: 720px; margin-inline: auto;
+  display: flex; gap: 1rem; align-items: center; justify-content: space-between;
+  background: #15101f; color: #fff; padding: 0.95rem 1.15rem; border-radius: 12px;
+  box-shadow: 0 24px 50px -24px rgba(0,0,0,0.5); z-index: 9999; font-size: 0.9rem; line-height: 1.5;
+}
+.cookie-notice a { color: #ff8a95; font-weight: 600; }
+.cookie-notice__ok {
+  flex: 0 0 auto; background: #fff; color: #15101f; border: 0; border-radius: 8px;
+  padding: 0.55rem 1.1rem; font: 600 0.9rem "Inter", sans-serif; cursor: pointer;
+}
+.cookie-notice__ok:hover { background: #f0eaf9; }
+@media (max-width: 560px) { .cookie-notice { flex-direction: column; align-items: stretch; text-align: left; } }
