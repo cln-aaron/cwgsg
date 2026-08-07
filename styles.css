@@ -844,7 +844,7 @@ main, .nav, .footer { position: relative; z-index: 1; }
 .footer__company + .footer__address { margin-top: 0.45rem; }
 
 
-/* RedRelay flagship wordmark + chips */
+/* RealRelay flagship wordmark + chips */
 .rr { font-family: "Sora", sans-serif; font-weight: 800; letter-spacing: -0.02em; color: #d6001c; }
 .rr-relay { color: var(--text); }
 .rr-ai { color: #4d12a6; }
@@ -898,7 +898,7 @@ main, .nav, .footer { position: relative; z-index: 1; }
 .member--feature .member__avatar { margin-bottom: 0; flex: 0 0 auto; }
 .member--feature .member__body { flex: 1 1 auto; }
 
-/* RedRelay brand colours (match the official red logo) */
+/* RealRelay brand colours (match the official red logo) */
 .rr { color: #15101f; }
 .rr-ai { color: #e11d2a; }
 .rr-chip { color: #c30f1a; background: rgba(226, 32, 42, 0.08); border-color: rgba(226,32,42,0.18); }
@@ -910,7 +910,7 @@ main, .nav, .footer { position: relative; z-index: 1; }
 .footer__partner-meta { color: var(--muted); font-size: 0.85rem; }
 .event__link { color: var(--red); font-weight: 600; white-space: nowrap; }
 
-/* RedRelay flagship heading + official logo card */
+/* RealRelay flagship heading + official logo card */
 .rr-heading { font-size: clamp(1.7rem, 3.4vw, 2.4rem); letter-spacing: -0.02em; line-height: 1.1; margin: 0.3rem 0 1rem; }
 .rr-card {
   display: grid;
