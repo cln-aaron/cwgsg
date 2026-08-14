@@ -1118,9 +1118,13 @@ main, .nav, .footer { position: relative; z-index: 1; }
 
 /* Embedded video (event recap) */
 .video-embed { margin: 1.6rem 0; }
+.video-embed__frame {
+  position: relative; width: 100%; max-width: 100%; aspect-ratio: 16 / 9;
+  background: #000; border: 1px solid var(--stroke); border-radius: var(--radius-sm); overflow: hidden;
+}
 .video-embed__player {
-  width: 100%; aspect-ratio: 16 / 9; height: auto; display: block;
-  background: #000; border-radius: var(--radius-sm); border: 1px solid var(--stroke);
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: contain; display: block; border: 0;
 }
 .video-embed figcaption { margin-top: 0.55rem; font-size: 0.82rem; color: var(--faint); line-height: 1.45; }
 .video-embed figcaption a { color: var(--red); font-weight: 600; }
