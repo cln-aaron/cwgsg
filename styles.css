@@ -929,6 +929,9 @@ main, .nav, .footer { position: relative; z-index: 1; }
 /* Pyramid: two lead partners on top, three below */
 .partner-grid--top { grid-template-columns: repeat(2, 1fr); margin-bottom: 1.4rem; }
 .partner-grid--bottom { grid-template-columns: repeat(3, 1fr); }
+/* Solo centred partner (single card between the pyramid rows) */
+.partner-grid--solo { grid-template-columns: minmax(0, 520px); justify-content: center; margin-bottom: 1.4rem; }
+.partner-card__wordmark { font: 800 1.9rem "Sora", sans-serif; letter-spacing: -0.02em; color: var(--purple-deep); }
 @media (max-width: 860px) {
   .partner-grid--top, .partner-grid--bottom { grid-template-columns: 1fr 1fr; max-width: none; }
 }
