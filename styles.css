@@ -1148,7 +1148,6 @@ main, .nav, .footer { position: relative; z-index: 1; }
 .post__title { font:800 clamp(1.7rem,3.4vw,2.4rem)/1.15 "Sora",sans-serif; letter-spacing:-.02em; margin-bottom:0.5rem; }
 .post__byline { color:var(--muted); font-size:0.9rem; margin-bottom:1.6rem; }
 .post__body p { color:var(--muted); line-height:1.85; margin-bottom:1.1rem; }
-.post__body p:first-of-type { font-size:1.1rem; color:var(--text); }
 .post__body strong { color:var(--text); font-weight:600; }
 .post__sign { font-family:"Sora",sans-serif; font-weight:700; color:var(--text); }
 
