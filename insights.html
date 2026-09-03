@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Insights | CWG Innovations</title>
+  <meta name="description" content="From the director's desk — perspectives on AI, cybersecurity and building trust in the agentic era, from Aaron Ang, Regional Director APAC at CWG Innovations." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='2' y='2' width='28' height='28' rx='8' fill='%234d12a6'/%3E%3Cpath d='M30 21v9h-9z' fill='%23d6001c'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <canvas id="ember-canvas" aria-hidden="true"></canvas>
+  <div class="aurora" aria-hidden="true"></div>
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="brand" aria-label="CWG Innovation home">
+        <img class="brand__logo" src="assets/cwg-logo.png" alt="CWG" width="100" height="36" />
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="what-we-do.html">What We Do</a>
+        <a href="partners.html">Partners</a>
+        <a href="events.html">Newsroom &amp; Events</a>
+        <a href="insights.html" aria-current="page">Insights</a>
+        <a href="https://www.realrelay.ai" target="_blank" rel="noopener">RealRelay.ai</a>
+        <a href="contact.html" class="btn btn--ghost nav__cta">Get in touch</a>
+      </nav>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="pagehead">
+      <div class="container">
+        <span class="eyebrow reveal">Insights</span>
+        <h1 class="pagehead__title reveal">From the <span class="flame-text">director&rsquo;s desk</span></h1>
+        <p class="pagehead__lead reveal">Perspectives on AI, cybersecurity and building trust in the agentic era &mdash; from Aaron Ang, our Regional Director for APAC.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:1rem">
+      <div class="container">
+        <div class="author-card reveal">
+          <div class="author-card__avatar" aria-hidden="true">AA</div>
+          <div>
+            <div class="author-card__name">Aaron Ang</div>
+            <div class="author-card__role">Regional Director, APAC &mdash; CWG Innovations</div>
+            <p class="author-card__bio">Non-Executive Director of Edvance International Holdings (HKEX: 1410) and Vice-President of the Digital Defence Alliance Singapore. A cybersecurity and AI strategy voice across Asia, writing on where security, AI and people meet.</p>
+          </div>
+        </div>
+
+        <article class="post reveal">
+          <div class="post__meta"><span class="post__tag">The Straits Times</span><span>15 Aug 2026</span><span>Cybersecurity</span></div>
+          <h1 class="post__title">&ldquo;The platform itself is the red flag&rdquo;</h1>
+          <p class="post__byline">By Aaron Ang</p>
+
+          <figure class="st-shot">
+            <a href="https://www.straitstimes.com/tech/st-explains-how-do-scammers-exploit-government-directories-and-how-to-stop-it" target="_blank" rel="noopener"><img src="assets/st-article.jpg" alt="The Straits Times — ST Explains: How do scammers exploit government directories, and how can they be stopped? (15 August 2026), featuring Aaron Ang of CWG Innovations" loading="lazy" /></a>
+            <figcaption>As featured in <strong>The Straits Times</strong>, 15 August 2026. <a href="https://www.straitstimes.com/tech/st-explains-how-do-scammers-exploit-government-directories-and-how-to-stop-it" target="_blank" rel="noopener">Read the full article &nearr;</a></figcaption>
+          </figure>
+
+          <div class="post__body">
+            <p>When The Straits Times asked me how scammers exploit our government directories, my answer probably wasn&rsquo;t the one people expected. Yes, a public list of names, titles and numbers lends an impersonator credibility &mdash; look up the officer, find a real match, and your guard drops. But the more important shift is <em>where</em> these scams now live.</p>
+            <p>Government official impersonation scams more than doubled last year &mdash; 3,363 cases, and $242.9 million lost. As the telcos clamped down on spoofed local and agency numbers, the fraudsters simply moved house. As I told ST, they have shifted to messaging apps like WhatsApp to spoof numbers the telcos can&rsquo;t police &mdash; official logos as profile pictures, and, in the bolder cases, someone in uniform against an office backdrop on a video call.</p>
+            <p>My advice is blunt, because it needs to be: <strong>no Singapore agency handles case matters over WhatsApp.</strong> The platform itself is the red flag &mdash; you don&rsquo;t even need to work out whether the officer is real. That one rule protects more people than any amount of detail-checking.</p>
+            <p>I also don&rsquo;t think stripping every directory is the answer. Changing all our contact details at once could open fresh gaps in the confusion &mdash; it&rsquo;s a bit like changing your house number to stop junk mail. The durable fix is the human layer: make &ldquo;pause, and verify on a number you looked up yourself&rdquo; a reflex, and keep reinforcing that officials will never ask you to move money or hand over passwords. That belief in education is a big part of the work I do with the Digital Defence Alliance Singapore.</p>
+            <p>There is a reason this matters to us at CWG Innovations, beyond good citizenship. The very same trick &mdash; a convincing message that says &ldquo;do this now&rdquo; &mdash; is what fools an AI agent. Give an agent your inbox and your files, and an attacker no longer has to break in; they simply leave instructions it will read and obey. That is exactly what we built <span class="rr">Real<span class="rr-relay">Relay</span><span class="rr-ai">.ai</span></span> to defend against: security isn&rsquo;t bolted on after the agent is built &mdash; it&rsquo;s validated continuously inside the platform, by an agent that thinks like an attacker within the limits you set.</p>
+            <p>Scam calls, spoofed apps, autonomous agents &mdash; the channel keeps changing. The discipline doesn&rsquo;t: assume you&rsquo;ll be targeted, make the easy attacks hard, and never outsource your judgement, whether to a stranger on the phone or to a machine.</p>
+            <p class="post__sign">&mdash; Aaron</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta__inner reveal">
+        <div class="cta__glow" aria-hidden="true"></div>
+        <h2>Building AI you can actually trust</h2>
+        <p>If secure, sovereign-ready AI is on your agenda, we should talk.</p>
+        <div class="hero__actions" style="justify-content:center">
+          <a href="contact.html" class="btn btn--primary">Get in touch</a>
+          <a href="https://www.realrelay.ai" target="_blank" rel="noopener" class="btn btn--ghost">Visit RealRelay.ai</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="brand">
+          <img class="brand__logo" src="assets/cwg-logo.png" alt="CWG" width="92" height="33" />
+        </a>
+        <p>We build tailored AI solutions, AI-driven cybersecurity and our unified platform, RealRelay.ai &mdash; from Singapore.</p>
+        <p class="footer__company">CWG Innovations Pte Ltd</p>
+        <address class="footer__address">
+          Level 39, Marina Bay Financial Centre Tower 2,<br />
+          10 Marina Boulevard, Singapore 018983<br />
+          <a href="tel:+6568185781">+65 6818 5781</a>
+        </address>
+      </div>
+      <div class="footer__col">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="what-we-do.html">What We Do</a>
+        <a href="partners.html">Partners</a>
+      </div>
+      <div class="footer__col">
+        <h4>More</h4>
+        <a href="events.html">Events</a>
+        <a href="insights.html">Insights</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer__col">
+        <h4>Get in touch</h4>
+        <a href="mailto:hello@cwgsg.ai">hello@cwgsg.ai</a>
+        <a href="tel:+6568185781">+65 6818 5781</a>
+        <a href="contact.html">Talk to the team</a>
+      </div>
+    </div>
+    <div class="container footer__partner">
+      <span class="footer__partner-label">In partnership with</span>
+      <img class="footer__partner-logo" src="assets/edvance-logo.png" alt="Edvance International Holdings" loading="lazy" />
+      <span class="footer__partner-meta">Edvance International Holdings Limited &middot; Listed on the Hong Kong Stock Exchange (HKEX: 1410)</span>
+    </div>
+    <div class="container footer__base">
+      <span>&copy; <span id="year"></span> CWG Innovations Pte Ltd. All rights reserved. &middot; Data protection: <a href="mailto:dpo@cwgsg.ai">dpo@cwgsg.ai</a></span>
+      <span class="footer__legal"><a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a> &middot; <a href="security.html">Security</a> &middot; <a href="privacy.html#cookies">Cookie Notice</a></span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
