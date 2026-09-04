@@ -1178,3 +1178,110 @@ main, .nav, .footer { position: relative; z-index: 1; }
 .press__links { display:flex; flex-wrap:wrap; gap:0.4rem 1.4rem; padding-top:0.2rem; }
 .press__links a { color:var(--red); font-weight:600; font-size:0.9rem; }
 .press__links a:hover { color:var(--purple-deep); }
+
+/* =========================================================
+   EDITORIAL REDESIGN  —  magazine layout + serif display
+   Paradise-Matrix vibe, CWG palette & nav kept intact.
+   (appended last so it governs the look)
+   ========================================================= */
+:root{
+  --serif:"Instrument Serif", Georgia, "Times New Roman", serif;
+  --deep:#4d12a6; --deep-2:#3d0e85; --deep-ink:#22074c;
+  --accent:#d6001c;
+  --white:#ffffff; --paper:#f7f5fb;
+  --rule:rgba(22,14,44,.12); --rule-strong:rgba(22,14,44,.24);
+  --ink:#141019; --grey:#57506c;
+  --pad-y:clamp(78px,9vw,138px);
+  --radius:10px; --radius-sm:6px;
+}
+.aurora{ opacity:.42; }
+
+body{ font-size:17px; line-height:1.72; }
+
+/* ---- Serif display type ---- */
+h1,h2{ font-family:var(--serif); font-weight:400; letter-spacing:0; }
+.hero__title{ font-family:var(--serif); font-weight:400; font-size:clamp(3rem,6.2vw,5.4rem); line-height:1.015; letter-spacing:-.012em; margin-bottom:1.6rem; }
+.pagehead__title{ font-family:var(--serif); font-weight:400; font-size:clamp(2.7rem,6vw,4.7rem); line-height:1.03; letter-spacing:-.012em; }
+.section__head h2, .split__copy h2, .cta h2, .rr-heading, .event h2{
+  font-family:var(--serif); font-weight:400; font-size:clamp(2.15rem,3.9vw,3.4rem); line-height:1.06; letter-spacing:-.006em;
+}
+.post__title{ font-family:var(--serif); font-weight:400; }
+.flame-text{ font-style:italic; }
+.hero__lead, .pagehead__lead{ font-size:clamp(1.1rem,1.5vw,1.28rem); line-height:1.6; }
+
+/* ---- Kicker eyebrows ---- */
+.eyebrow{ display:inline-flex; align-items:center; gap:.65rem; background:none!important; border:0!important; padding:0!important; margin-bottom:1.2rem; color:var(--accent); font:600 .74rem/1 "Inter",sans-serif; letter-spacing:.22em; text-transform:uppercase; }
+.eyebrow::before{ content:""; width:26px; height:1px; background:var(--accent); flex:0 0 auto; }
+
+/* ---- Section rhythm ---- */
+.section{ padding:var(--pad-y) 0; }
+.section--alt{ background:var(--paper); }
+.section__head{ max-width:54rem; margin:0 0 clamp(2.6rem,4.5vw,3.9rem); text-align:left; }
+.section__head p{ max-width:46ch; font-size:1.24rem; line-height:1.42; color:var(--grey); font-family:var(--serif); font-style:italic; }
+
+/* ---- Cards: hairline editorial grid ---- */
+.cards, .solutions{ gap:1px; background:var(--rule); border:1px solid var(--rule); border-radius:var(--radius); overflow:hidden; }
+.card, .solution{ background:var(--white); border:0; border-radius:0; box-shadow:none!important; padding:2.2rem 2rem; transition:background .3s var(--ease); }
+.card::before{ display:none; }
+.card:hover, .solution:hover{ transform:none; background:var(--paper); }
+.card__icon{ width:auto; height:auto; background:none!important; border:0!important; margin-bottom:1.05rem; box-shadow:none!important; }
+.card__icon svg{ width:30px; height:30px; stroke:var(--accent); }
+.card h3, .solution h3, .step h3{ font-family:var(--serif); font-weight:400; font-size:1.55rem; letter-spacing:-.01em; margin-bottom:.5rem; }
+.solution::after{ background:var(--accent); }
+.cards--four{ grid-template-columns:repeat(4,1fr); }
+
+/* ---- Steps: editorial numbered ---- */
+.step{ background:var(--white); border:1px solid var(--rule); border-radius:var(--radius); box-shadow:none!important; }
+.step__num{ font-family:var(--serif); font-style:italic; -webkit-text-fill-color:currentColor; background:none; color:var(--accent); font-size:2.6rem; }
+
+/* ---- Deep brand band ---- */
+.section--deep{ background:var(--deep-ink); color:#fff; }
+.section--deep .eyebrow{ color:#fff; }
+.section--deep .eyebrow::before{ background:rgba(255,255,255,.55); }
+.section--deep h2, .section--deep h3, .section--deep .rr-heading{ color:#fff; }
+.section--deep p, .section--deep .lead{ color:rgba(255,255,255,.8); }
+.section--deep .rr, .section--deep .rr-relay{ color:#fff; }
+.section--deep .rr-chip{ color:#fff; background:rgba(255,255,255,.08); border-color:rgba(255,255,255,.22); }
+.section--deep .card__icon svg{ stroke:#fff; }
+
+/* ---- Buttons: squared, editorial ---- */
+.btn{ border-radius:4px; }
+.btn--ghost{ background:transparent; border:1px solid var(--rule-strong); color:var(--ink); backdrop-filter:none; }
+.btn--ghost:hover{ background:var(--ink); color:#fff; border-color:var(--ink); }
+.section--deep .btn--ghost, .cta__inner .btn--ghost{ border-color:rgba(255,255,255,.42); color:#fff; }
+.section--deep .btn--ghost:hover, .cta__inner .btn--ghost:hover{ background:#fff; color:var(--deep-ink); }
+
+/* ---- CTA band → deep ---- */
+.cta__inner{ background:var(--deep)!important; border:0!important; color:#fff; box-shadow:0 40px 80px -50px rgba(38,8,88,.7)!important; }
+.cta__inner h2{ color:#fff; }
+.cta__inner > p{ color:rgba(255,255,255,.82); }
+.cta__glow{ opacity:.5; }
+
+/* ---- Footer → near-black purple ---- */
+.footer{ background:var(--deep-ink)!important; color:rgba(255,255,255,.7); }
+.footer h4{ color:#fff; }
+.footer a{ color:rgba(255,255,255,.72); }
+.footer a:hover{ color:#fff; }
+.footer .footer__company{ color:#fff; }
+.footer__address, .footer__brand p{ color:rgba(255,255,255,.62)!important; }
+.footer .brand__logo{ filter:brightness(0) invert(1); }
+.footer__partner{ border-top:1px solid rgba(255,255,255,.16); }
+.footer__partner-logo{ filter:brightness(0) invert(1); opacity:.82; }
+.footer__partner-label{ color:rgba(255,255,255,.5); }
+.footer__partner-meta{ color:rgba(255,255,255,.58); }
+.footer__base{ border-top:1px solid rgba(255,255,255,.16); color:rgba(255,255,255,.55); }
+.footer__legal a{ color:rgba(255,255,255,.6); }
+
+/* ---- Media: tighten radii for editorial ---- */
+.media-photo, .rr-card, .event__figure img, .st-shot img, .video-embed__frame, .partner-card__plate, .case, .comptia, .contact__form, .contact__card{ border-radius:var(--radius); }
+
+/* Primary buttons read as solid white on the deep bands */
+.section--deep .btn--primary, .cta__inner .btn--primary{ background:#fff; color:var(--deep-ink); box-shadow:0 10px 30px -14px rgba(0,0,0,.5); }
+.section--deep .btn--primary:hover, .cta__inner .btn--primary:hover{ background:#f1ebfa; transform:translateY(-2px); }
+
+/* Mobile: keep serif display comfortable */
+@media (max-width:560px){
+  .hero__title{ font-size:clamp(2.5rem,10.5vw,3rem); }
+  .pagehead__title{ font-size:clamp(2.3rem,9.5vw,3rem); }
+  .section__head h2, .split__copy h2, .cta h2, .rr-heading, .event h2{ font-size:clamp(1.9rem,7.5vw,2.4rem); }
+}
