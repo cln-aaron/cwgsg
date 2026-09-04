@@ -1325,3 +1325,20 @@ h1, h2 { font-family:"Sora","Inter",sans-serif; font-weight:700; }
   .pagehead__title{ font-size:clamp(2rem,8vw,2.8rem); }
   .section__head h2, .split__copy h2, .cta h2, .rr-heading, .event h2{ font-size:clamp(1.7rem,6.5vw,2.2rem); }
 }
+
+/* ---- Section imagery: wide band figures ---- */
+.band-figure{ margin: clamp(28px,3.5vw,48px) 0 0; width:100%; }
+.band-figure img{ width:100%; height:clamp(300px,38vw,460px); object-fit:cover; display:block; }
+.band-figure--wide img{ height:clamp(320px,42vw,540px); }
+.section--flush{ padding-top:0; }
+#why .split__media .media-photo img{ height:clamp(300px,34vw,440px); object-fit:cover; }
+@media (max-width:640px){
+  .band-figure img, .band-figure--wide img, #why .split__media .media-photo img{ height:clamp(220px,60vw,300px); }
+}
+
+/* Realistic photo treatment for section imagery (show the photo, subtle brand wash only) */
+.media-photo--real img{ filter:saturate(1.04) contrast(1.02); }
+.media-photo--real::after{ background:linear-gradient(160deg, rgba(232,17,45,0.08), rgba(123,47,240,0.14)); mix-blend-mode:soft-light; }
+.media-photo--real::before{ display:none; }
+.band-figure--pano img{ height:clamp(220px,26vw,380px); }
+@media (max-width:640px){ .band-figure--pano img{ height:clamp(160px,42vw,240px); } }
