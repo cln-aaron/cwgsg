@@ -1216,7 +1216,7 @@ h1,h2{ font-family:var(--serif); font-weight:400; letter-spacing:0; }
 /* ---- Section rhythm ---- */
 .section{ padding:var(--pad-y) 0; }
 .section--alt{ background:var(--paper); }
-.section__head{ max-width:54rem; margin:0 0 clamp(2.6rem,4.5vw,3.9rem); text-align:left; }
+.section__head{ max-width:none; margin:0 0 clamp(2.6rem,4.5vw,3.9rem); text-align:left; }
 .section__head p{ max-width:46ch; font-size:1.24rem; line-height:1.42; color:var(--grey); font-family:var(--serif); font-style:italic; }
 
 /* ---- Cards: hairline editorial grid ---- */
@@ -1298,7 +1298,7 @@ h1, h2 { font-family:"Sora","Inter",sans-serif; font-weight:700; }
   font-family:"Sora",sans-serif; font-weight:800; font-size:clamp(1.9rem,3.4vw,2.75rem); line-height:1.1; letter-spacing:-0.02em;
 }
 .flame-text{ font-style:normal; }
-.section__head p{ font-family:"Inter",sans-serif; font-style:normal; font-size:1.14rem; line-height:1.6; color:var(--grey); max-width:52ch; }
+.section__head p{ font-family:"Inter",sans-serif; font-style:normal; font-size:1.14rem; line-height:1.6; color:var(--grey); max-width:none; }
 
 /* --- Paradise-Matrix open columns (no box, no shadow) --- */
 .cards, .solutions{ background:none!important; border:0!important; border-radius:0!important; overflow:visible!important; gap:clamp(22px,3vw,44px); }
@@ -1403,12 +1403,12 @@ h1, h2 { font-family:"Sora","Inter",sans-serif; font-weight:700; }
 /* ---- Get started band (single CTA + inline subscribe) ---- */
 .closing__kicker{ display:inline-block; font:700 0.72rem/1 "Sora","Inter",sans-serif; letter-spacing:0.16em; text-transform:uppercase; color:rgba(255,255,255,0.72); margin-bottom:1rem; }
 .gs__actions{ display:flex; gap:0.8rem; justify-content:center; flex-wrap:wrap; margin-top:1.6rem; }
-.gs__sub{ max-width:660px; margin:clamp(2rem,3.4vw,3rem) auto 0; padding-top:clamp(1.6rem,2.6vw,2.4rem); border-top:1px solid rgba(255,255,255,0.16); }
+.gs__sub{ max-width:760px; margin:clamp(2rem,3.4vw,3rem) auto 0; padding-top:clamp(1.6rem,2.6vw,2.4rem); border-top:1px solid rgba(255,255,255,0.16); }
 .gs__sublabel{ color:rgba(255,255,255,0.82)!important; font-size:0.98rem; margin:0 auto 1.1rem; max-width:34rem; }
-.gs__fields{ display:flex; gap:0.6rem; justify-content:center; flex-wrap:wrap; }
-.gs__fields input{ flex:1 1 190px; min-width:0; padding:0.85rem 1.1rem; border-radius:12px; border:1px solid rgba(255,255,255,0.28); background:#fff; color:#1a1130; font:400 0.95rem "Inter",sans-serif; }
+.gs__fields{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:0.6rem; }
+.gs__fields input{ min-width:0; padding:0.85rem 1.1rem; border-radius:12px; border:1px solid rgba(255,255,255,0.28); background:#fff; color:#1a1130; font:400 0.95rem "Inter",sans-serif; }
 .gs__fields input::placeholder{ color:#8a8398; }
-.gs__fields .btn{ flex:0 0 auto; }
+.gs__submit{ display:block; margin:0.8rem auto 0; min-width:220px; }
 .gs__captcha{ display:flex; justify-content:center; margin:1rem 0 0; }
 .gs__form .subscribe__note{ color:#ffd7dd; }
 .gs__consent{ color:rgba(255,255,255,0.62)!important; font-size:0.8rem; line-height:1.55; margin-top:1rem; }
@@ -1417,7 +1417,7 @@ h1, h2 { font-family:"Sora","Inter",sans-serif; font-weight:700; }
 .gs__done p{ color:#fff!important; margin:0; font-size:1.02rem; text-align:left; }
 .gs__done-badge{ width:42px; height:42px; border-radius:50%; background:rgba(255,255,255,0.16); display:grid; place-items:center; flex:0 0 auto; }
 .gs__done-badge svg{ width:22px; height:22px; }
-@media (max-width:560px){ .gs__fields{ flex-direction:column; } .gs__fields input, .gs__fields .btn{ width:100%; flex:0 0 auto; } }
+@media (max-width:560px){ .gs__fields{ grid-template-columns:1fr; } .gs__submit{ width:100%; } }
 
 /* Ensure the hidden attribute always wins over display rules */
 [hidden]{ display:none !important; }
