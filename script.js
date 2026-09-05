@@ -112,6 +112,50 @@
      protected by reCAPTCHA; Salesforce redirects to /thank-you.html on
      success, so no client-side submit handling is required here. */
 
+  /* ---------- Mailing-list subscribe (home) ----------
+     Posts to Salesforce Web-to-Lead through a hidden iframe so the page
+     does not navigate away, then swaps the card to an inline thank-you. */
+  const subForm = document.getElementById("subscribeForm");
+  if (subForm) {
+    const subCard = document.getElementById("subscribeCard");
+    const subDone = document.getElementById("subscribeDone");
+    const subNote = document.getElementById("subscribeNote");
+    const subFrame = document.getElementById("sfSubFrame");
+    let subSubmitting = false;
+    subForm.addEventListener("submit", (e) => {
+      const email = (subForm.email.value || "").trim();
+      const name = (subForm.last_name.value || "").trim();
+      const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      let captchaOk = true;
+      try {
+        if (window.grecaptcha && typeof grecaptcha.getResponse === "function") {
+          captchaOk = grecaptcha.getResponse().length > 0;
+        }
+      } catch (_) { /* recaptcha not ready */ }
+      if (!name || !validEmail || !captchaOk) {
+        e.preventDefault();
+        subNote.textContent = !name || !validEmail
+          ? "Please add your name and a valid email address."
+          : "Please confirm you are not a robot.";
+        subNote.hidden = false;
+        return;
+      }
+      subNote.hidden = true;
+      subSubmitting = true; // native submit continues into the hidden iframe
+    });
+    if (subFrame) {
+      subFrame.addEventListener("load", () => {
+        if (!subSubmitting) return; // ignore the initial blank load
+        subSubmitting = false;
+        if (subCard) subCard.hidden = true;
+        if (subDone) {
+          subDone.hidden = false;
+          subDone.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+      });
+    }
+  }
+
   /* ---------- Cookie notice (strictly-necessary only) ---------- */
   (function () {
     try {
