@@ -1399,3 +1399,16 @@ h1, h2 { font-family:"Sora","Inter",sans-serif; font-weight:700; }
 .subscribe__done h2{ margin:0 0 0.5rem; }
 .subscribe__done p{ color:var(--grey,#5b5570); max-width:460px; margin:0 auto; }
 @media (max-width:560px){ .subscribe__row{ grid-template-columns:1fr; } }
+
+/* ---- Closing band: CTA + subscribe side by side ---- */
+.closing__grid{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(20px,2.6vw,34px); align-items:stretch; }
+.closing__cta{ position:relative; display:flex; flex-direction:column; justify-content:center; text-align:center; height:100%; margin:0; }
+.closing__cta > *{ position:relative; z-index:1; }
+.closing__cta h2{ margin-bottom:0.8rem; }
+.closing__cta > p{ margin:0 auto; }
+.closing__actions{ display:flex; gap:0.8rem; justify-content:center; flex-wrap:wrap; margin-top:1.5rem; }
+.closing__col{ display:flex; }
+.closing__col > .subscribe__card{ width:100%; max-width:none; margin:0; }
+.closing .subscribe__row{ grid-template-columns:1fr; }
+.closing .subscribe__intro{ margin-bottom:1.3rem; }
+@media (max-width:880px){ .closing__grid{ grid-template-columns:1fr; } }
