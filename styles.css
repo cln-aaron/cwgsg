@@ -1355,7 +1355,7 @@ h1, h2 { font-family:"Sora","Inter",sans-serif; font-weight:700; }
 .vertical__copy p{ color:var(--grey,#5b5570); font-size:1.06rem; line-height:1.66; margin:0 0 0.9rem; }
 .vertical__copy p:last-child{ margin-bottom:0; }
 .vertical--flip .vertical__media{ order:2; }
-.vertical__more{ margin-top:clamp(34px,4.4vw,60px); padding-top:clamp(22px,2.4vw,32px); border-top:1px solid var(--rule-strong,rgba(20,10,45,0.14)); font-size:1.08rem; line-height:1.6; color:var(--grey,#5b5570); max-width:760px; }
+.vertical__more{ margin-top:clamp(34px,4.4vw,60px); padding-top:clamp(22px,2.4vw,32px); border-top:1px solid var(--rule-strong,rgba(20,10,45,0.14)); font-size:1.08rem; line-height:1.6; color:var(--grey,#5b5570); max-width:none; }
 @media (max-width:760px){
   .vertical{ grid-template-columns:1fr; gap:20px; }
   .vertical--flip .vertical__media{ order:0; }
@@ -1400,19 +1400,24 @@ h1, h2 { font-family:"Sora","Inter",sans-serif; font-weight:700; }
 .subscribe__done p{ color:var(--grey,#5b5570); max-width:460px; margin:0 auto; }
 @media (max-width:560px){ .subscribe__row{ grid-template-columns:1fr; } }
 
-/* ---- Closing band: CTA + subscribe side by side ---- */
-.closing__grid{ display:grid; grid-template-columns:1fr 1fr; gap:clamp(20px,2.6vw,34px); align-items:stretch; }
-.closing__cta{ position:relative; display:flex; flex-direction:column; justify-content:center; text-align:center; height:100%; margin:0; padding:clamp(2.4rem,4vw,3.4rem) clamp(1.6rem,3vw,2.6rem); }
-.closing__cta > *{ position:relative; z-index:1; }
+/* ---- Get started band (single CTA + inline subscribe) ---- */
 .closing__kicker{ display:inline-block; font:700 0.72rem/1 "Sora","Inter",sans-serif; letter-spacing:0.16em; text-transform:uppercase; color:rgba(255,255,255,0.72); margin-bottom:1rem; }
-.closing__cta h2{ margin-bottom:0.9rem; }
-.closing__cta > p{ margin:0 auto; max-width:30rem; }
-.closing__actions{ display:flex; gap:0.8rem; justify-content:center; flex-wrap:wrap; margin-top:1.6rem; }
-.closing__col{ display:flex; }
-.closing__col > .subscribe__card{ width:100%; max-width:none; margin:0; padding:clamp(24px,2.8vw,40px); }
-.closing .subscribe__intro{ margin-bottom:1.2rem; }
-.closing .subscribe__row{ grid-template-columns:1fr 1fr; }
-.closing .subscribe__captcha{ margin:0.2rem 0 0.9rem; }
-.closing .subscribe__form .form-consent{ margin-top:0.9rem; font-size:0.82rem; }
-@media (max-width:880px){ .closing__grid{ grid-template-columns:1fr; } }
-@media (max-width:520px){ .closing .subscribe__row{ grid-template-columns:1fr; } }
+.gs__actions{ display:flex; gap:0.8rem; justify-content:center; flex-wrap:wrap; margin-top:1.6rem; }
+.gs__sub{ max-width:660px; margin:clamp(2rem,3.4vw,3rem) auto 0; padding-top:clamp(1.6rem,2.6vw,2.4rem); border-top:1px solid rgba(255,255,255,0.16); }
+.gs__sublabel{ color:rgba(255,255,255,0.82)!important; font-size:0.98rem; margin:0 auto 1.1rem; max-width:34rem; }
+.gs__fields{ display:flex; gap:0.6rem; justify-content:center; flex-wrap:wrap; }
+.gs__fields input{ flex:1 1 190px; min-width:0; padding:0.85rem 1.1rem; border-radius:12px; border:1px solid rgba(255,255,255,0.28); background:#fff; color:#1a1130; font:400 0.95rem "Inter",sans-serif; }
+.gs__fields input::placeholder{ color:#8a8398; }
+.gs__fields .btn{ flex:0 0 auto; }
+.gs__captcha{ display:flex; justify-content:center; margin:1rem 0 0; }
+.gs__form .subscribe__note{ color:#ffd7dd; }
+.gs__consent{ color:rgba(255,255,255,0.62)!important; font-size:0.8rem; line-height:1.55; margin-top:1rem; }
+.gs__consent a{ color:#fff!important; font-weight:600; text-decoration:underline; }
+.gs__done{ max-width:660px; margin:clamp(2rem,3.4vw,3rem) auto 0; padding-top:clamp(1.6rem,2.6vw,2.4rem); border-top:1px solid rgba(255,255,255,0.16); display:flex; align-items:center; justify-content:center; gap:0.9rem; }
+.gs__done p{ color:#fff!important; margin:0; font-size:1.02rem; text-align:left; }
+.gs__done-badge{ width:42px; height:42px; border-radius:50%; background:rgba(255,255,255,0.16); display:grid; place-items:center; flex:0 0 auto; }
+.gs__done-badge svg{ width:22px; height:22px; }
+@media (max-width:560px){ .gs__fields{ flex-direction:column; } .gs__fields input, .gs__fields .btn{ width:100%; flex:0 0 auto; } }
+
+/* Ensure the hidden attribute always wins over display rules */
+[hidden]{ display:none !important; }

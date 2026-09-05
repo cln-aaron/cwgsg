@@ -307,62 +307,46 @@
             <p>In on-premise and air-gapped deployments, open models run locally with no outbound telemetry.</p>
           </article>
         </div>
-        <p class="claim-note">Security, sovereignty and compliance capabilities vary by product and deployment tier and are subject to your agreement with us. Current certifications are listed on our <a href="security.html">Security page</a>.</p>
       </div>
     </section>
 
-    <section class="section section--alt closing" id="get-started">
-      <div class="container closing__grid">
-        <div class="cta__inner closing__cta reveal">
-          <div class="cta__glow" aria-hidden="true"></div>
-          <span class="closing__kicker">Get started</span>
-          <h2>Let&rsquo;s build your AI advantage</h2>
-          <p>Tell us where you want AI to help, and where it cannot fail. We&rsquo;ll show you what good looks like.</p>
-          <div class="closing__actions">
-            <a href="contact.html" class="btn btn--primary">Book a demo</a>
-            <a href="https://www.realrelay.ai" target="_blank" rel="noopener" class="btn btn--ghost">Visit RealRelay.ai</a>
-          </div>
+    <section class="cta getstarted" id="get-started">
+      <div class="container cta__inner reveal">
+        <div class="cta__glow" aria-hidden="true"></div>
+        <span class="closing__kicker">Get started</span>
+        <h2>Let&rsquo;s build your AI advantage</h2>
+        <p>Tell us where you want AI to help, and where it cannot fail. We&rsquo;ll show you what good looks like.</p>
+        <div class="gs__actions">
+          <a href="contact.html" class="btn btn--primary">Book a demo</a>
+          <a href="https://www.realrelay.ai" target="_blank" rel="noopener" class="btn btn--ghost">Visit RealRelay.ai</a>
         </div>
 
-        <div class="closing__col">
-        <div class="subscribe__card" id="subscribeCard">
-          <div class="subscribe__intro reveal">
-            <span class="eyebrow">Stay in the loop</span>
-            <h2>Subscribe to our mailing list</h2>
-            <p>Occasional updates on secure AI, RealRelay.ai and what we are building. No spam, and you can unsubscribe anytime.</p>
-          </div>
-          <form id="subscribeForm" class="subscribe__form reveal" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&amp;orgId=00Dd500000K0DD3" method="POST" target="sfSubFrame">
+        <div class="gs__sub" id="subscribeCard">
+          <p class="gs__sublabel">Or just keep in touch. Subscribe to our mailing list for the occasional update. No spam.</p>
+          <form id="subscribeForm" class="gs__form" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&amp;orgId=00Dd500000K0DD3" method="POST" target="sfSubFrame">
             <input type="hidden" name="captcha_settings" value='{"keyname":"Website_Lead_Form","fallback":"true","orgId":"00Dd500000K0DD3","ts":""}' />
             <input type="hidden" name="oid" value="00Dd500000K0DD3" />
             <input type="hidden" name="retURL" value="https://www.cwgsg.ai/thank-you.html" />
             <input type="hidden" name="lead_source" value="Newsletter" />
             <input type="hidden" name="company" value="Mailing list subscriber" />
             <input type="hidden" name="description" value="Subscribed to the CWG Innovations mailing list from the website." />
-            <div class="subscribe__row">
-              <div class="field-block">
-                <label for="sub_name">Name</label>
-                <input id="sub_name" name="last_name" type="text" maxlength="80" placeholder="Your name" required />
-              </div>
-              <div class="field-block">
-                <label for="sub_email">Email</label>
-                <input id="sub_email" name="email" type="email" maxlength="80" placeholder="you@company.com" required />
-              </div>
+            <div class="gs__fields">
+              <input name="last_name" type="text" maxlength="80" aria-label="Your name" placeholder="Your name" required />
+              <input name="email" type="email" maxlength="80" aria-label="Work email" placeholder="Work email" required />
+              <button type="submit" class="btn btn--primary">Subscribe</button>
             </div>
-            <div class="subscribe__captcha">
+            <div class="gs__captcha">
               <div class="g-recaptcha" data-sitekey="6LeWZaotAAAAAOE7xZUppR3mm5PZrxiWPE-Ujxcl"></div>
             </div>
-            <button type="submit" class="btn btn--primary">Subscribe</button>
             <p class="subscribe__note" id="subscribeNote" role="alert" hidden></p>
-            <p class="form-consent">By subscribing you agree to join the CWG Innovations mailing list and to our use of your details under Singapore&rsquo;s Personal Data Protection Act (PDPA). You can unsubscribe or withdraw consent anytime by emailing <a href="mailto:dpo@cwgsg.ai">dpo@cwgsg.ai</a>. See our <a href="privacy.html">Privacy Policy</a>.</p>
+            <p class="gs__consent">By subscribing you agree to join the CWG Innovations mailing list under Singapore&rsquo;s PDPA. Unsubscribe anytime by emailing <a href="mailto:dpo@cwgsg.ai">dpo@cwgsg.ai</a>. See our <a href="privacy.html">Privacy Policy</a>.</p>
           </form>
         </div>
-        <div class="subscribe__card subscribe__done" id="subscribeDone" hidden>
-          <div class="ty-badge" aria-hidden="true">
+        <div class="gs__done" id="subscribeDone" hidden>
+          <span class="gs__done-badge" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-          </div>
-          <h2>You&rsquo;re on the list</h2>
-          <p>Thanks for subscribing. Look out for the occasional update from CWG Innovations, and nothing more.</p>
-        </div>
+          </span>
+          <p><strong>You&rsquo;re on the list.</strong> Thanks for subscribing, look out for the occasional update.</p>
         </div>
       </div>
       <iframe name="sfSubFrame" id="sfSubFrame" title="Subscribe" aria-hidden="true" style="display:none"></iframe>
