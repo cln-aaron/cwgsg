@@ -195,10 +195,10 @@ main, .nav, .footer { position: relative; z-index: 1; }
 .hero__lead { font-size: clamp(1.05rem, 1.6vw, 1.22rem); color: var(--muted); max-width: 34rem; margin-bottom: 2rem; }
 .hero__actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.6rem; }
 
-.hero__trust { display: flex; align-items: center; gap: 1.4rem; flex-wrap: wrap; }
-.trust__item { display: flex; flex-direction: column; }
-.trust__item strong { font: 700 1.35rem "Sora"; letter-spacing: -0.02em; }
-.trust__item span { font-size: 0.82rem; color: var(--faint); }
+.hero__trust { display: flex; align-items: flex-start; gap: 1rem; flex-wrap: wrap; }
+.trust__item { display: flex; flex-direction: column; min-width: 0; }
+.trust__item strong { font: 700 1.12rem "Sora"; letter-spacing: -0.02em; white-space: nowrap; }
+.trust__item span { font-size: 0.78rem; color: var(--faint); }
 .trust__divider { width: 1px; height: 34px; background: var(--stroke); }
 
 /* Hero orb */
@@ -1421,3 +1421,6 @@ h1, h2 { font-family:"Sora","Inter",sans-serif; font-weight:700; }
 
 /* Ensure the hidden attribute always wins over display rules */
 [hidden]{ display:none !important; }
+
+/* Keep the hero trust stats on one row while the hero is two columns */
+@media (min-width:901px){ .hero__trust{ flex-wrap:nowrap; } .hero__trust .trust__item{ flex:0 1 auto; } }
