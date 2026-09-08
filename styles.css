@@ -1426,4 +1426,7 @@ h1, h2 { font-family:"Sora","Inter",sans-serif; font-weight:700; }
 @media (min-width:901px){ .hero__trust{ flex-wrap:nowrap; } .hero__trust .trust__item{ flex:0 1 auto; } }
 
 /* Author disclaimer on the Perspectives page */
-.post__disclaimer{ max-width:760px; margin:0 auto; padding-top:1.4rem; border-top:1px solid var(--rule,rgba(22,14,44,0.12)); font-size:0.86rem; font-style:italic; line-height:1.55; color:var(--muted,#5b5570); text-align:center; }
+.post__disclaimer{ max-width:none; margin:0 auto; padding-top:1.4rem; border-top:1px solid var(--rule,rgba(22,14,44,0.12)); font-size:0.86rem; font-style:italic; line-height:1.55; color:var(--muted,#5b5570); text-align:center; }
+
+/* Perspectives intro: keep on one line on desktop */
+.pagehead__lead--wide{ max-width:none; font-size:clamp(1rem,1.3vw,1.12rem); }
